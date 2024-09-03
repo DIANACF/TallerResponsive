@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ionic</title>
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+    <header>
+        <h1>Syntax Movile</h1>
+    </header>
+
+    <div class="contenedor">
+        <section class="contenedor_section">
+            <h2>Introducción a Ionic</h2>
+
+            <a href="index.html">
+                <button class="btnVolver">Volver</button>
+            </a>
+        </section>
+
+        <section class="contenedor_section">
+            <h2>¿Qué es ionic?</h2>
+            <p>
+                Ionic es una estructura tecnológica (Framework) de código abierto 
+                que se utiliza en el desarrollo de aplicaciones móviles híbridas, 
+                es decir, se combinan el HTML5, CSS y JavaScript dando como resultado 
+                aplicaciones con una interfaz amigable e intuitiva para el usuario 
+                que luego se comercializan o descargan en plataformas como Android o IOS.
+            </p>
+        </section>
+
+        <section class="contenedor_section">
+            <h2>Características</h2>
+            <div>
+                <h3>Sistema de plataforma independiente</h3>
+                <p>para crear una apariencia nativa. No es necesario cambiar el código 
+                    porque se ejecuta en componentes web que están diseñados para dispositivos móviles.
+                </p>
+            </div>
+            <div>
+                <h3>Creación de aplicaciones móviles en toda la plataforma</h3>
+                <p>
+                    Ionic tiene la misma base de código que ayuda a los desarrolladores a 
+                    crear aplicaciones que funcionan bien y le brindan una apariencia coherente 
+                    en todos los dispositivos móviles.
+                </p>
+            </div>
+            <div>
+                <h3>Interfaz de usuario estándar</h3>
+                <p>
+                    Ionic tiene partes CSS y JS predeterminadas que permiten a los desarrolladores 
+                    crear aplicaciones móviles. El diseño predeterminado cubre la mayoría de las 
+                    secciones, pero puede agregar nuevas funciones según sus necesidades a las clases CSS predefinidas.
+                </p>
+            </div>
+            <div>
+                <h3>Basado completamente en Angular</h3>
+                <p>Ionic utiliza Angular como framework para la creación de aplicaciones web y móviles, 
+                    proporcionando diferentes extensiones HTML que resultan útiles para los desarrolladores. 
+                    Esto ofrece muchas funcionalidades al integrar Ionic con Angular para integrar componentes 
+                    atractivos en el framework. Con el sistema Ionic, Angular proporciona una solución óptima.
+                </p>
+            </div>
+            <div>
+                <h3>Uso de complementos en Cordova</h3>
+                <p>Ionic permite utilizar una gran cantidad de complementos, entre ellos el complemento Cordova, 
+                    los cuales ayudan a los desarrolladores a agregar características atractivas a su aplicación, 
+                    y a construir un dispositivo móvil ideal usando esos complementos.
+                </p>
+            </div>
+            <div>
+                <h3>Ayuda a crear plantillas modernas</h3>
+                <p>Los desarrolladores pueden construir diseños simples y estables con la ayuda de Ionic, 
+                    ya que éste les ofrece una variedad de temas y componentes personalizables que brindarán 
+                    una experiencia de usuario fantástica y atraerán a más usuarios a su aplicación.
+                </p>
+            </div>
+            <div>
+                <h3>Tecnología basada en web</h3>
+                <p>Ionic utiliza tecnología basada en web que viene con tecnología preparada para el futuro, 
+                    lo que permite que los desarrolladores realicen cambios en el código o personalizar cualquier 
+                    componente usado, de manera fácil y sin esfuerzo.
+                </p>
+            </div>
+        </section>
+        <section class="contenedor_section">
+            <h2>Configuración</h2>
+            <h3>Prerequisito</h3>
+            <ul>
+                <li>Tener instalado en la computadora Node.js</li>
+            </ul>
+            <div>
+                <h3>Instalación de Ionic CLI</h3>
+                <p>Instalación de Ionic CLI con npm:</p>
+                <div class="comandos">
+                   <strong>npm install -g @ionic/cli</strong> 
+                </div>
+                
+                <br>
+                <p>Si se tenia una instalación previa de Ionic CLI, se debe desinstalar debido a 
+                    un cambio en el nombre del paquete 
+                </p>
+                <div class="comandos">
+                    <strong>npm uninstall -g ionic</strong><br>                   
+                </div>
+                <div class="comandos">
+                    <strong>npm install -g @ionic/cli</strong>
+                </div>
+                
+
+                <div class="notaImportante">
+                    <h4>Importante</h4>
+                    <p>La -g opción significa instalar globalmente. Cuando los paquetes se instalan 
+                        globalmente, EACCES pueden ocurrir errores de permisos. Considere configurar
+                          npm para que funcione globalmente sin permisos elevados.
+                    </p>
+                </div>
+
+            </div>
+            <div>
+                <h3>Iniciar una aplicación</h3>
+                <p>Utilice el siguiente comando:</p>
+                <div class="comandos">
+                    <strong>ionic start</strong>
+                </div>
+                
+                <p>Se puede crear una aplicación Ionic usando una de las plantillas de aplicaciones predefinidas
+                     o una en blanco para empezar de cero, por ejemplo, blank starter, tabs starter y sidemenu starter.
+                    <br>Además se pueden dejar las opciones predefinidas para iniciar el proyecto o
+                    acomodar las preferencias manualmente.
+                </p>
+            </div>
+            <div>
+                <h3>Ejecutar la aplicación</h3>
+                <p>La mayor parte del desarrollo de aplicaciones Ionic se puede realizar directamente en el navegador 
+                    utilizando el ionic servecomando:
+                </p>
+                <div class="comandos">
+                   <strong>cd nombreProyecto</strong><br> 
+                </div>
+                <div class="comandos">
+                    <strong>ionic serve</strong>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    
+</body>
+</html>

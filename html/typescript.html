@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typescript</title>
+    <link rel="stylesheet" href="../css/base.css">
+  </head>
+  <body>
+    <header>
+      <h1>Syntax Movile</h1>
+    </header>
+
+    <div class="contenedor">
+      <section class="contenedor_section">
+        <h2>Introducción a Typescript</h2>
+
+        <a href="index.html">
+          <button class="btnVolver">Volver</button>
+      </a>
+      </section>
+
+      <section class="contenedor_section">
+        <h2>¿Qué es?</h2>
+        <p>
+          Es una extensión al lenguaje de programación JavaScript que se
+          caracteriza por ampliar su sintaxis en el ámbito de los tipos. Además
+          ,Typescript se conecta de manera más profunda con los editores de
+          código, revisando errores de manera más oportuna.
+        </p>
+      </section>
+
+      <h2>Sintaxis</h2>
+
+      <section class="contenedor_section">
+        <div>
+          <h3>Tipos de variables</h3>
+          <h4>Variables primitivas</h4>
+          <p>
+            Se refiere a los tipos de datos que son originales de un lenguaje de
+            programación. Para typescript estos son:
+          </p>
+          <ul>
+            <li><strong>boolean</strong> - Valores verdadero/falso</li>
+            <li>
+              <strong>string</strong> - Cadenas de texto como "Juan es hijo de
+              Don Luis Fonseca"
+            </li>
+            <li>
+              <strong>number</strong> - Números enteros y valores de punto
+              flotante
+            </li>
+            <li><strong>null</strong> - Un valor nulo o vacío</li>
+            <li>
+              <strong>undefined</strong> - Se le asigna a una variable cuando no
+              tiene asignado un valor
+            </li>
+            <li>
+              <strong>symbol</strong> - Usado para asignar un valor único, por
+              lo general se usa como identificador
+            </li>
+            <li>
+              <strong>bigint</strong> - Representa números enteros muy grandes,
+              más allá del rango que number puede manejar
+            </li>
+          </ul>
+
+          <h4>Variables no primitivas</h4>
+          <p>
+            Son aquellos que se derivan de los tipos primitivos o que son
+            estructuras más complejas.
+          </p>
+          <ul>
+            <li>
+              <strong>Object</strong> - Representa cualquier entidad no
+              primitiva. Los objetos son colecciones de pares clave-valor
+            </li>
+            <li>
+              <strong>enum</strong> - Una enumeración (enum) es una forma de dar
+              nombres más amigables a un conjunto de valores numéricos
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Asignación de tipos de datos</h3>
+          <p>
+            Existen dos formas para la asignación de tipos de datos.Estas son:
+          </p>
+
+          <p>
+            La palabra reservada se refiere al uso de
+            <strong>let (para variables)</strong> o
+            <strong>const (para constantes)</strong>
+            según sea necesario.
+          </p>
+
+          <div>
+            <h4>Forma Explicita</h4>
+            <p>
+              En esta forma da a entender el tipo asignado a la variable. Se
+              sigue la siguiente estructura:
+            </p>
+            <strong>palabraReservada nombreDeLaVariable: tipoDeDato</strong>
+
+            
+
+            <div class="ejemplos">
+              <p>Por ejemplo:</p>
+              <p>let firstName: string = "Dylan";</p>
+            </div>
+          </div>
+
+          <div>
+            <h4>Forma Implicita</h4>
+            <p>
+              En esta forma, se tiene que inferir el valor asignado a la
+              variable. Se sigue la siguiente estructura:
+            </p>
+            <strong>palabraReservada nombreDeLaVariable</strong>
+
+            <div class="ejemplos">
+              <p>Por ejemplo:</p>
+              <p>let firstName = "Dylan";</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contenedor_section">
+        <h2>Clases, métodos, interface y types</h2>
+        <div>
+          <h3>Clases</h3>
+          <p>
+            Organizan el código en estructuras reutilizables y 
+            permiten definir propiedades y métodos relacionados.<br>
+          </p>
+          <p>Sintaxis</p>
+          <strong>
+            class NombreDeLaClase{<br>
+              //atributos<br>
+              propiedad1: tipo;<br>
+              propiedad2: tipo;<br><br>
+
+              //constructor<br>
+              constructor (param1:tipo, param1:tipo,) {<br>
+                this.propiedad1 = param1;<br>
+                this.propiedad2 = param2;
+              }<br><br>
+              //método<br>
+              nombreDelMetodo(parametros: tipo): tipoDeRetorno {<br>
+                // Cuerpo del método
+              }<br>
+
+            }
+          </strong>
+        </div>
+        <div>
+          <h3>Métodos</h3>
+          <p>
+            Es una función que está definida dentro 
+            de una clase y describe un comportamiento que los 
+            objetos de esa clase pueden realizar.
+          </p>
+          <p>Sintaxis</p><br>
+          <strong>
+            class NombreDeLaClase {
+              nombreDelMetodo(parametros: tipo): tipoDeRetorno {<br>
+                // Cuerpo del método
+              }<br>
+            }
+          </strong>
+          <div class="ejemplos">
+            <p>Por ejemplo</p>
+            <p>
+              class Calculadora {<br>
+                sumar(a: number, b: number): number <br>{
+                  return a + b;}
+                <br>
+              }
+            </p>
+          </div>
+
+        </div>
+        <div>
+          <h3>Interface</h3>
+          <p>
+            Una interface o interfaz es una forma de definir la estructura de un objeto, 
+            es decir, qué propiedades y métodos debe tener un objeto, 
+            sin preocuparse por su implementación.
+          </p>
+          <p>Sintaxis</p>
+          <strong>
+            interface NombreDeLaInterfaz {<br>
+              propiedad1: tipo;<br>
+              propiedad2: tipo;<br>
+              metodo1(param1: tipo): tipoDeRetorno;<br>
+            }
+
+          </strong>
+        </div>
+
+        <div>
+          <h3>Types</h3>
+          <p>
+            Los types o tipos permiten a los desarrolladores 
+            crear alias para combinaciones de tipos 
+            existentes o para describir la estructura 
+            de datos más complejos.
+          </p>
+          <h4>Usos</h4>
+          <h4>1. Alias de tipo</h4>
+          <p>
+            Permiten crear un nombre alternativo para un tipo 
+            existente o para una combinación de tipos.
+          </p>
+          <div class="ejemplos">
+            <p>Por ejemplo:</p>
+            <p>
+              type ID = string | number;<br><br>
+              let usuarioId: ID;<br>
+              usuarioId = "abc123";  // Válido<br>
+              usuarioId = 123456;    // También válido
+            </p>
+          </div>
+          <h4>2. Combinación de tipos</h4>
+          <p>Puedes combinar tipos usando union types (|) o intersection types (&)</p>
+          <div class="ejemplos">
+            <p>
+              Para este ejemplo, se va a utlizar un intersection type (&),
+              por esta razón el objeto debe con todas la propiedades y tipos
+               de los tipos combinados
+            </p>
+            <p>
+              type TieneNombre = { nombre: string };<br>
+              type TieneEdad = { edad: number };<br><br>
+              type PersonaCompleta = TieneNombre & TieneEdad;<br><br>
+              let persona: PersonaCompleta = {<br>
+                nombre: "Juan",<br>
+                edad: 25<br>
+              };
+            </p>
+          </div>
+          
+        </div>
+      </section>
+
+      <section class="contenedor_section">
+        <div>
+          <h3>Condicionales</h3>
+          <p>
+            Se utilizan para realizar diferentes acciones en función de
+            diferentes condiciones.
+          </p>
+          <div>
+            <h4>Condicional if</h4>
+            <p>
+              Se utiliza para especificar un bloque de código que se ejecutará,
+              si una condición especificada es verdadera
+            </p>
+            <p>
+              Sintaxis<br>
+              <strong>
+                if (condición) { //instrucciones que se ejecutarán si la
+                condición es verdadera }
+              </strong>
+            </p>
+
+            <div class="ejemplos">
+              <p>Por ejemplo:</p>
+              <p>const dia: number = 4;</p>
+              <p>
+                if(dia >= 1 && dia<=7) { console.log("Es un numero valido para
+                un dia"); }
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h4> Condicional else</h4>
+            <p>
+              Se utiliza para especificar un bloque de código que se ejecutará,
+              si la condición propuesta en el if es falsa
+            </p>
+            <p>
+              Sintaxis<br>
+              <strong> if ( condición ){ //instrucciones si la condición es verdadera}else { //instrucciones si la condición es falsa }</strong>
+            </p>
+            <div class="ejemplos">
+              <p>Por ejemplo:</p>
+              <p>const dia: number = 4;</p>
+              <p>
+                if(dia >= 1 && dia<=7){ console.log("Es un numero valido para un
+                dia"); }<br />else{ console.log("No es un numero valido para un
+                dia"); }
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h4> Condicional else if</h4>
+            <p>
+                Se utiliza para especificar una nueva condición para probar,
+                si la primera condición es falsa
+            </p>
+            <p>
+                Sintaxis<br>
+                <strong>
+                    if( Condición1) {//instrucciones si la condición es verdadera <br>} else if( Condición2 ) 
+                    {//instrucciones si la Condición1 es false y la Condición2 es verdadera <br>} else {
+                        //instrucciones si la Condición1 y Condición2 son falsas
+                    }
+                </strong>
+            </p>
+            <div class="ejemplos">
+                <p>Por ejemplo:</p>
+                <p>const dia: number = 4;</p>
+                <p>
+                    if(dia >= 1 && dia<=5){
+                        console.log("El dia es laboral");<br>
+                    }else if(dia>=6 && dia<=7){
+                        console.log("El dia es no laborabl");<br>
+                    }else{
+                        console.log("No es un numero valido para un dia");
+                    }
+                </p>
+            </div>
+
+          </div>
+
+          <div>
+            <h4> Condicional switch</h4>
+            <p>
+                Se utiliza para especificar muchos 
+                bloques alternativos de código que se ejecutarán
+            </p>
+            <p>
+                Sintaxis <br>
+                <strong>
+                    switch(expresión) {<br>
+                        case x:<br>
+                          // instrucciones<br>
+                          break;<br>
+                        case y:<br>
+                          // instrucciones<br>
+                          break;<br>
+                        default:<br>
+                          // instrucciones<br>
+                      }
+                </strong>
+            </p>
+            <div class="ejemplos">
+                <p>Por ejemplo:</p>
+                <p>const dia: number = 4;</p>
+                <p>
+                    switch(dia){<br>
+                        case 1:<br>
+                            console.log("Lunes");<br>
+                            break;<br>
+                        case 2:<br>
+                            console.log("Martes");<br>
+                            break;<br>
+                        case 3:<br>
+                            console.log("Miercoles");<br>
+                            break;<br>
+                        case 4:<br>
+                            console.log("Jueves");<br>
+                            break;<br>
+                            default:<br>
+                            console.log("No es un numero valido para un dia");<br>
+                    }
+                </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3>Bucles</h3>
+          <p>
+            Se utilizan para iterar sobre colecciones de datos 
+            o ejecutar bloques de código repetidamente. 
+          </p>
+
+          <div>
+            <h4>Bucle for</h4>
+            <p>Se utiliza para iterar un número específico de veces.</p>
+            <p>Sintaxis</p>
+            <strong>for (expresion1; expresion2; expresion3) 
+              { //Bloque de código que será ejecutado}
+            </strong>
+            <ul>
+              <li>La expresión 1 se ejecuta (una vez) antes de la ejecución del bloque de código.</li>
+              <li>La expresión 2 define la condición para ejecutar el bloque de código.</li>
+              <li>La expresión 3 se ejecuta (cada vez) después de que se haya ejecutado el bloque de código.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Bucle for-each</h4>
+            <p>
+              Se utiliza para iterar sobre los elementos de un array 
+              y ejecutar una función determinada en cada uno de ellos.
+            </p>
+            <p>Sintaxis</p>
+            <strong>array.forEach((elemento, indice, arreglo) => {//código a ejecutar});</strong>
+            <div class="ejemplos">
+              <p>Por ejemplo</p>
+              <p>const frutas = ['manzana', 'banana', 'cereza'];</p>
+              <p>frutas.forEach((fruta) => { console.log(fruta); });</p>
+            </div>
+
+          </div>
+
+          <div>
+            <h4>Bucle while</h4>
+            <p>Recorre un bloque de código mientras una condición especificada sea verdadera</p>
+            <p>Sintaxis</p>
+            <strong>while (condición){ //bloque de código que se ejecutará }</strong>
+          </div>
+
+          <div>
+            <h4>Bucle do-while</h4>
+            <p>
+              Este bucle ejecutará el bloque de código una vez, antes de verificar 
+              si la condición es verdadera, y luego repetirá el bucle mientras la 
+              condición sea verdadera.
+            </p>
+            <p>Sintaxis</p>
+            <strong>
+              do { //bloque de código que se ejecutará <br>}
+              while (condición);
+
+
+            </strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="contenedor_section">
+        <h2>Arrays</h2>
+        <p>En Typescript tienen una sintaxis especifica.</p>
+        <strong> const nombreArray: tipoDeDato[ ] = [ ]</strong>
+        <h3>Readonly</h3>
+        <p>
+          La palabra clave <strong>readonly</strong> evita que se modifiquen los Arrays.
+        </p>
+        <div class="ejemplos">
+          <p>Por ejemplo, en este caso .push no existe en el tipo "readonly"
+            entonces el array no va a cambiar para agregar otro valor </p>
+            <p>const names: readonly string[] = ["Dylan"];</p>
+            <p>names.push("Jack"); </p>
+        </div>
+        <h3>Inferecia</h3>
+        <p>
+          Se refiere a que Typescript puede inferir el tipo de dato de un Array 
+          si este tiene valores.
+        </p>
+        <div class="ejemplos">
+          <p>
+            Por ejemplo, en este caso Typescript infiere que el Array es de tipo number
+            y como no tiene la palabra "readonly" si se pueden agragar valores al Array con .push
+          </p>
+          <p>const numbers = [1, 2, 3];</p>
+          <p>numbers.push(4); </p>
+        </div>
+      </section>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular</title>
+    <link rel="stylesheet" href="../css/base.css">
+  </head>
+  <body>
+    <header>
+      <h1>Syntax Movile</h1>
+    </header>
+
+    <div class="contenedor">
+      <section class="contenedor_section">
+        <h2>Introducción a Angular</h2>
+
+        <a href="index.html">
+          <button class="btnVolver">Volver</button>
+        </a>
+      </section>
+
+      <section class="contenedor_section">
+        <h2>¿Qué es Angular?</h2>
+        <p>
+          Angular es un web framework que permite a los desarrolladores crear
+          aplicaciones rápidas y confiables.
+        </p>
+      </section>
+
+      <section class="contenedor_section">
+        <h2>Características</h2>
+        <div>
+          <h3>Arquitectura Basada en Componentes</h3>
+          <p>
+            Angular organiza las aplicaciones en componentes modulares, cada
+            uno encapsulando lógica utilizando Typescript, HTML, y estilos, lo
+            que facilita el desarrollo, mantenimiento y escalabilidad.
+          </p>
+        </div>
+
+        <div>
+          <h3>Data Binding Bidireccional</h3>
+          <p>
+            Permite la sincronización automática de los datos entre el modelo y
+            la vista. Esto significa que cualquier cambio en el modelo se
+            refleja instantáneamente en la vista, y viceversa.
+          </p>
+        </div>
+
+        <div>
+          <h3>Inyección de Dependencias</h3>
+          <p>
+            Angular proporciona un sistema de inyección de dependencias que
+            permite gestionar de manera eficiente los servicios y componentes,
+            promoviendo la modularidad y la reutilización de código.
+          </p>
+        </div>
+        <div>
+          <h3>Directivas</h3>
+          <p>
+            Las directivas son marcadores en el DOM que Angular interpreta y
+            manipula para añadir comportamiento a los elementos HTML. Esto
+            incluye directivas estructurales (*ngIf, *ngFor) y directivas de
+            atributos (ngClass, ngStyle).
+          </p>
+        </div>
+        <div>
+          <h3>Routing</h3>
+          <p>
+            Angular incluye un sistema de enrutamiento que permite definir rutas
+            para navegar entre diferentes vistas o componentes en una SPA
+            (Single Page Application), gestionando el estado de la URL y la
+            navegación de manera fluida.
+          </p>
+        </div>
+        <div>
+          <h3>Formularios Reactivos y Plantilla-Driven</h3>
+          <p>
+            Angular ofrece dos enfoques para manejar formularios: Formularios
+            Reactivos (Reactive Forms) y Formularios Basados en Plantillas
+            (Template-Driven Forms), facilitando la validación y manejo de datos
+            de entrada del usuario.
+          </p>
+        </div>
+        <div>
+          <h3>Animaciones</h3>
+          <p>
+            Angular tiene un módulo de animaciones que permite crear
+            transiciones y animaciones complejas de manera declarativa usando la
+            API de animaciones de Angular.
+          </p>
+        </div>
+        <div>
+          <h3>Angular CLI</h3>
+          <p>
+            Angular CLI es una poderosa herramienta de línea de comandos que
+            facilita la creación, configuración, compilación y despliegue de
+            aplicaciones Angular. Ofrece comandos para generar componentes,
+            servicios, módulos, y más.
+          </p>
+        </div>
+        <div>
+          <h3>Testing integrado</h3>
+          <p>
+            Angular promueve el desarrollo basado en pruebas (TDD) e incluye
+            soporte para pruebas unitarias y de integración mediante
+            herramientas como Jasmine y Karma.
+          </p>
+        </div>
+        <div>
+          <h3>Compativilidad móvil y de escritorio</h3>
+          <p>Desarrollo de aplicaciones móviles y de escritorio.</p>
+        </div>
+      </section>
+      <section class="contenedor_section">
+        <h2>Configuración</h2>
+        <div>
+          <h3>Prerequisitos</h3>
+          <ul>
+            <li>Node.js - v ^18.9.1 o más reciente</li>
+            <li>Editor de texto: preferiblemente Visual Studio Code</li>
+            <li>
+              Terminal: necesaria para ejecutar los comandos CLI de Angular
+            </li>
+          </ul>
+        </div>
+
+        <div>
+            <h3>Instalación de Angular CLI</h3>
+            <p>
+                Abra una terminal (si está usando Visual Studio Code , 
+                puede abrir una terminal integrada ) y ejecute el siguiente comando:
+            </p>
+            <div class="comandos">
+              <strong>npm install -g @angular/cli</strong>
+            </div>
+            
+            <p>Si se tienen problemas con el comando en Windows o Linux se debe consultar la documentación de la CLI</p>
+        </div>
+        <div>
+            <h3>Creación de un nuevo proyecto</h3>
+            <p>
+                En la terminal, ejecute el comando CLI ng newcon el nombre de proyecto deseado.
+            </p>
+            <div class="comandos">
+              <strong>ng new < project-name > </strong>
+            </div>
+            
+            <p>
+                Se le presentarán algunas opciones de configuración para su proyecto.Utilice las teclas 
+                de flecha e Intro para navegar y seleccionar las opciones que desee.<br>
+                <br>
+
+                Si no tiene ninguna preferencia, simplemente presione la tecla Enter para tomar las 
+                opciones predeterminadas y continuar con la configuración.<br>
+                <br>
+                
+                Después de seleccionar las opciones de configuración y la CLI ejecuta la configuración, debería ver el siguiente mensaje:
+            </p>
+            <strong>
+                ✔ Packages installed successfully.<br>
+                Successfully initialized git.
+ 
+            </strong>
+        </div>
+        <div>
+            <h3>Ejecutar el proyecto localmente</h3>
+            <p>En su terminal, cambie a su nuevo proyecto Angular.</p>
+            <div class="comandos">
+              <strong>cd el-nombre-de-su-app</strong>
+            </div>
+            
+            <p>
+                Todas tus dependencias deberían estar instaladas en este punto 
+                (lo cual puedes verificar verificando si existe una node_modules carpeta en tu proyecto)
+                , por lo que puedes iniciar tu proyecto ejecutando el comando:
+            </p>
+            <div class="comandos">
+              <strong>npm start</strong>
+            </div>
+            
+            <p>Si todo es exitoso, deberías ver un mensaje de confirmación similar en tu terminal:</p>
+            <strong>
+                Watch mode enabled. Watching for file changes...<br>
+                NOTE: Raw file sizes do not reflect development server per-request transformations.<br>
+                ➜ Local: http://localhost:4200/<br>
+                ➜ press h + enter to show help 
+            </strong>
+            <p>Y ahora puedes visitar la ruta en <strong>Local</strong> (por ejemplo, http://localhost:4200) para ver tu aplicación.</p>
+        </div>
+
+        
+      </section>
+
+      <section class="contenedor_section">
+        <div>
+            <h2>Signals</h2>
+            <p>
+                Una señal es un contenedor que rodea un valor y notifica a los consumidores interesados ​cuando 
+                dicho valor cambia. Las señales pueden contener cualquier valor, desde valores primitivos hasta estructuras de datos complejas.<br>
+            </p>
+            <p>Lees el valor de una señal llamando a su función getter, lo que permite a Angular 
+                rastrear dónde se usa la señal.</p>
+        </div>
+        <div>
+            <h3>Writable signals</h3>
+            <p>
+                Proporcionan una API para actualizar sus valores directamente. Puedes crear señales escribibles 
+                llamando a la signalfunción con el valor inicial de la señal: 
+            </p>
+            <div class="ejemplos">
+                <p>
+                    const count = signal(0);  
+                </p>
+                <p>
+                    console.log('The count is: ' + count());
+                </p>
+            </div>
+            <p>
+                Para cambiar el valor de una Writable signals, puede <strong>.set()</strong> hacerlo directamente o
+                utilizar <strong>.update()</strong> para calcular un nuevo valor apartir del anterior:
+            </p>
+            <div class="ejemplos">
+                <p>count.update(value => value + 1);</p>
+            </div>
+            <p>Las señales escribibles tienen el tipo WritableSignal.</p>
+        </div>
+
+        <div>
+            <h3>Computed signals</h3>
+            <p>
+                Son señales de solo lectura que derivan su valor de otras señales. Las señales calculadas se definen 
+                mediante la computedfunción y especificando una derivación:
+            </p>
+            <div class="ejemplos">
+                <p>
+                    const count: WritableSignal< number > = signal(0);
+                </p>
+                <p>
+                    const doubleCount: Signal< number > = computed(() => count() * 2);
+                </p>
+            </div>
+            <p>
+                La <strong>doubleCount</strong> señal depende de la <strong>count</strong> señal. Cada vez que count se actualiza, Angular sabe que doubleCount también es necesario actualizarla.
+            </p>
+        </div>
+        
+        
+
+      </section>
+    </div>
+  </body>
+</html>
